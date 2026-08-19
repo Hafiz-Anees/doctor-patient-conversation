@@ -19,8 +19,8 @@ from typing import Optional
 
 import google.generativeai as genai
 
-from core.config import GEMINI_MODEL
-from core.database import pg_cursor, VITALS_SCHEMA  # VITALS_SCHEMA == "registration"
+from app.core.config import GEMINI_MODEL
+from app.core.database import pg_cursor, VITALS_SCHEMA  # VITALS_SCHEMA == "registration"
 
 # The exact columns we may write to registration.patient (mrno handled separately).
 # This is a FIXED whitelist — used to build SQL safely (no user-controlled names).

@@ -14,16 +14,16 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter, UploadFile, HTTPException, Request
 
-from core.database import save_nurse_audio, update_nurse_audio
-from models.session import NurseSessionStart, EditTranscriptRequest
-from services.transcription_service import transcribe_from_bytes, transcribe_pcm_stream
-from services.vitals_service import (
+from app.core.database import save_nurse_audio, update_nurse_audio
+from app.models.session import NurseSessionStart, EditTranscriptRequest
+from app.services.transcription_service import transcribe_from_bytes, transcribe_pcm_stream
+from app.services.vitals_service import (
     extract_vitals_from_transcript, vitals_extracted_to_db,
     save_vitals_to_db, get_latest_vitals,
 )
-from services.summary_service import generate_summary, translate_transcript
-from services.patient_service import extract_and_save_demographics
-from utils.session_store import create_session, update_session, require_session, require_summary
+from app.services.summary_service import generate_summary, translate_transcript
+from app.services.patient_service import extract_and_save_demographics
+from app.utils.session_store import create_session, update_session, require_session, require_summary
 
 router = APIRouter(prefix="/nurse", tags=["Nurse"])
 

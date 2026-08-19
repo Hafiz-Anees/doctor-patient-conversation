@@ -5,8 +5,8 @@ routes/auth.py — login endpoint that returns a JWT token.
 from fastapi import APIRouter, HTTPException, status
 from pydantic import BaseModel
 
-from core.config import DEMO_USERS
-from core.security import create_access_token
+from app.core.config import DEMO_USERS
+from app.core.security import create_access_token
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 

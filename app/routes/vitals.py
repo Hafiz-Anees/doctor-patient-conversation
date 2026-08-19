@@ -3,8 +3,8 @@ routes/vitals.py — manual vitals entry + history (PostgreSQL).
 """
 
 from fastapi import APIRouter, HTTPException
-from models.vitals import VitalsInput, VitalsDB
-from services.vitals_service import save_vitals_to_db, get_latest_vitals, get_vitals_history
+from app.models.vitals import VitalsInput, VitalsDB
+from app.services.vitals_service import save_vitals_to_db, get_latest_vitals, get_vitals_history
 
 router = APIRouter(prefix="/patient", tags=["Vitals"])
 

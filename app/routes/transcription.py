@@ -4,9 +4,9 @@ routes/transcription.py — standalone transcription endpoints (legacy + shared)
 
 from fastapi import APIRouter, UploadFile, Form, HTTPException
 
-from services.transcription_service import transcribe_upload
-from services.summary_service import translate_transcript, generate_summary
-from utils.session_store import require_session, update_session, get_session
+from app.services.transcription_service import transcribe_upload
+from app.services.summary_service import translate_transcript, generate_summary
+from app.utils.session_store import require_session, update_session, get_session
 
 router = APIRouter(prefix="/transcription", tags=["Transcription"])
 

@@ -12,8 +12,8 @@ from datetime import datetime, timezone
 
 import google.generativeai as genai
 
-from core.config import GEMINI_MODEL
-from core.database import get_doctor_record_by_session, get_doctor_records_by_mrno
+from app.core.config import GEMINI_MODEL
+from app.core.database import get_doctor_record_by_session, get_doctor_records_by_mrno
 
 genai.configure()
 

@@ -4,7 +4,7 @@ coding_service.py — generate ICD, HCC, and E/M codes from a structured note.
 
 import json
 import google.generativeai as genai
-from core.config import GEMINI_MODEL
+from app.core.config import GEMINI_MODEL
 
 genai.configure()
 

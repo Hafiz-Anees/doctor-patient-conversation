@@ -1,4 +1,4 @@
-from core.middleware import HideEmptyFieldsMiddleware
+from app.core.middleware import HideEmptyFieldsMiddleware
 #docstring
 """
 main.py — EMRChain Backend entry point (PostgreSQL only).
@@ -10,18 +10,18 @@ Run with:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from core.database import ping_postgres, bootstrap_postgres
-from core.config import GEMINI_API_KEY
+from app.core.database import ping_postgres, bootstrap_postgres
+from app.core.config import GEMINI_API_KEY
 
-from routes.auth import router as auth_router
-from routes.patient import router as patient_router
-from routes.vitals import router as vitals_router
-from routes.nurse import router as nurse_router
-from routes.doctor import router as doctor_router
-from routes.transcription import router as transcription_router
-from routes.prescription import router as prescription_router
-from routes.analytics import router as analytics_router
-from routes.lab_tests import router as lab_tests_router
+from app.routes.auth import router as auth_router
+from app.routes.patient import router as patient_router
+from app.routes.vitals import router as vitals_router
+from app.routes.nurse import router as nurse_router
+from app.routes.doctor import router as doctor_router
+from app.routes.transcription import router as transcription_router
+from app.routes.prescription import router as prescription_router
+from app.routes.analytics import router as analytics_router
+from app.routes.lab_tests import router as lab_tests_router
 
 import google.generativeai as genai # type: ignore
 genai.configure(api_key=GEMINI_API_KEY)

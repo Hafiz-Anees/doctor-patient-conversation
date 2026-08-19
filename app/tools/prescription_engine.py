@@ -5,9 +5,9 @@ Enriches raw medication lists with codes from local reference tables.
 No AI used — pure lookup.
 """
 
-from tools.medicine_codes import get_medicine_by_name, search_medicines
-from tools.frequency_codes import match_frequency_from_text
-from tools.route_codes import match_route_from_text
+from app.tools.medicine_codes import get_medicine_by_name, search_medicines
+from app.tools.frequency_codes import match_frequency_from_text
+from app.tools.route_codes import match_route_from_text
 
 
 def enrich_prescription_item(item: dict) -> dict:

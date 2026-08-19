@@ -3,7 +3,7 @@ routes/lab_tests.py — lab test dropdown + search endpoints.
 """
 
 from fastapi import APIRouter
-from tools.lab_tests import LAB_TESTS, get_all_categories, get_tests_by_category
+from app.tools.lab_tests import LAB_TESTS, get_all_categories, get_tests_by_category
 
 router = APIRouter(prefix="/lab-tests", tags=["Lab Tests"])
 

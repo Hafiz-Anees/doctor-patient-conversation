@@ -17,25 +17,25 @@ from typing import Optional
 
 from fastapi import APIRouter, UploadFile, HTTPException
 
-from core.database import (
+from app.core.database import (
     save_doctor_audio, update_doctor_audio,
     get_latest_nurse_record_by_mrno, get_doctor_record_by_session,
 )
-from services.transcription_service import transcribe_from_bytes
-from services.summary_service import generate_summary, translate_transcript
-from services.vitals_service import (
+from app.services.transcription_service import transcribe_from_bytes
+from app.services.summary_service import generate_summary, translate_transcript
+from app.services.vitals_service import (
     get_latest_vitals, extract_vitals_from_transcript,
     update_doctor_vitals_on_nurse_row,
 )
-from services.prescription_service import extract_raw_medications, build_prescription
-from services.coding_service import generate_medical_codes
-from services.merge_service import merge_summaries, get_medical_record, get_patient_records
-from services.patient_service import extract_and_save_demographics
-from utils.session_store import (
+from app.services.prescription_service import extract_raw_medications, build_prescription
+from app.services.coding_service import generate_medical_codes
+from app.services.merge_service import merge_summaries, get_medical_record, get_patient_records
+from app.services.patient_service import extract_and_save_demographics
+from app.utils.session_store import (
     create_session, update_session, require_session, require_summary, get_session,
 )
-from utils.json_helpers import keep_keys
-from models.session import DoctorSessionStart, EditTranscriptRequest
+from app.utils.json_helpers import keep_keys
+from app.models.session import DoctorSessionStart, EditTranscriptRequest
 
 router = APIRouter(prefix="/doctor", tags=["Doctor"])
 

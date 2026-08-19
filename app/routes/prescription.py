@@ -4,8 +4,8 @@ routes/prescription.py — generate prescription from a session's summary.
 
 from fastapi import APIRouter, Form, HTTPException
 
-from services.prescription_service import extract_raw_medications, build_prescription
-from utils.session_store import require_session, require_summary, update_session
+from app.services.prescription_service import extract_raw_medications, build_prescription
+from app.utils.session_store import require_session, require_summary, update_session
 
 router = APIRouter(prefix="/prescription", tags=["Prescription"])
 

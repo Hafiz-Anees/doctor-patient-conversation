@@ -8,9 +8,9 @@ import uuid
 import tempfile
 import google.generativeai as genai
 
-from core.config import GEMINI_API_KEY, GEMINI_MODEL
-from utils.audio_helpers import save_upload, cleanup_file, strip_pcm_markers, pcm_to_wav_bytes
-from utils.session_store import create_session
+from app.core.config import GEMINI_API_KEY, GEMINI_MODEL
+from app.utils.audio_helpers import save_upload, cleanup_file, strip_pcm_markers, pcm_to_wav_bytes
+from app.utils.session_store import create_session
 
 genai.configure(api_key=GEMINI_API_KEY)
 

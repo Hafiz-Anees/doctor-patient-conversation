@@ -12,9 +12,9 @@ import json
 import google.generativeai as genai
 from typing import Optional
 
-from core.config import GEMINI_MODEL
-from core.database import pg_cursor, VITALS_SCHEMA
-from models.vitals import VitalsExtracted, VitalsDB
+from app.core.config import GEMINI_MODEL
+from app.core.database import pg_cursor, VITALS_SCHEMA
+from app.models.vitals import VitalsExtracted, VitalsDB
 
 
 # ── AI extraction ─────────────────────────────────────────────────────────────

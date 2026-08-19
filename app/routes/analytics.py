@@ -8,7 +8,7 @@ the doctor row (not one row per drug).
 """
 
 from fastapi import APIRouter
-from core.database import pg_cursor
+from app.core.database import pg_cursor
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 

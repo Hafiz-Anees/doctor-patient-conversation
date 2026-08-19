@@ -13,9 +13,9 @@ from datetime import datetime, timezone
 
 import google.generativeai as genai
 
-from core.config import GEMINI_MODEL
-from tools.prescription_engine import enrich_prescription, format_prescription_table
-from tools.lab_tests import match_lab_test_from_text
+from app.core.config import GEMINI_MODEL
+from app.tools.prescription_engine import enrich_prescription, format_prescription_table
+from app.tools.lab_tests import match_lab_test_from_text
 
 genai.configure()
 

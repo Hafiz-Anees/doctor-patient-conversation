@@ -7,7 +7,7 @@ import json
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import Response
 
-from utils.json_helpers import remove_empty_fields
+from app.utils.json_helpers import remove_empty_fields
 
 
 class HideEmptyFieldsMiddleware(BaseHTTPMiddleware):

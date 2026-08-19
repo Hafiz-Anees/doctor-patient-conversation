@@ -15,8 +15,8 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from core.config import POSTGRES_URI
-from core.models import Base, NurseAudioRecording, DoctorAudioRecording
+from app.core.config import POSTGRES_URI
+from app.core.models import Base, NurseAudioRecording, DoctorAudioRecording
 
 print("Loaded POSTGRES_URI:", POSTGRES_URI)
 

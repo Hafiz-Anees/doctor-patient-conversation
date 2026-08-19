@@ -7,7 +7,7 @@ writing into the shared registration.patient table.
 """
 
 from fastapi import APIRouter, HTTPException
-from core.database import pg_cursor, VITALS_SCHEMA
+from app.core.database import pg_cursor, VITALS_SCHEMA
 
 router = APIRouter(prefix="/patient", tags=["Patient"])
 
