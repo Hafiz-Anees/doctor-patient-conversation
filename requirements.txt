@@ -1,0 +1,25 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# Gemini AI
+google-generativeai==0.7.2
+
+# MongoDB
+pymongo[srv]==4.7.2
+
+# PostgreSQL
+psycopg2-binary==2.9.9
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Pydantic
+pydantic[email]==2.7.1
+
+# Utilities
+httpx==0.27.0
+
+sqlalchemy>=2.0.0
