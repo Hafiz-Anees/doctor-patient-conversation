@@ -2,9 +2,9 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL: str = os.getenv("gemini-2.5-flash","")
-POSTGRES_URI: str = os.getenv("POSTGRES_URI", "")
+GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY")
+GEMINI_MODEL: str = os.getenv("GEMINI_MODEL")
+POSTGRES_URI: str = os.getenv("POSTGRES_URI")
 
 # -------------Sanity checks --------------
 if not POSTGRES_URI:
