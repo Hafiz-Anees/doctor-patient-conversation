@@ -16,9 +16,9 @@ if not GEMINI_API_KEY:
 
 
 # ── Auth ─────────────────
-# SECRET_KEY: str = os.getenv("SECRET_KEY", "changeme-secret-key")
-# ALGORITHM: str = "HS256"
-# ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 8
+SECRET_KEY: str = os.getenv("SECRET_KEY", "changeme-secret-key")
+ALGORITHM: str = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 8
 
 
 
