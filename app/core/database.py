@@ -18,7 +18,7 @@ from sqlalchemy.orm import sessionmaker
 from app.core.config import POSTGRES_URI
 from app.core.models import Base, NurseAudioRecording, DoctorAudioRecording
 
-print("Loaded POSTGRES_URI:", POSTGRES_URI)
+print("Loaded POSTGRES_URI")
 
 VITALS_SCHEMA = "registration"   # vitals live here, NOT public
 

@@ -201,14 +201,6 @@ POST /auth/login
 # Use token
 Authorization: Bearer <token>
 ```
-
-Demo accounts:
-| Email | Password | Role |
-|-------|----------|------|
-| emrchain@gmail.com | emr1234 | admin |
-| nurse@emrchain.com | nurse1234 | nurse |
-| doctor@emrchain.com | doctor1234 | doctor |
-
 ---
 
 ## Health Check
